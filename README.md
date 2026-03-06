@@ -1,66 +1,49 @@
-# Simulated Paint Spraying on a Wall Mesh
+# Simulated Paint Spraying on a Wall Mesh with Isaac Warp and OpenUSD
 
-Spray paint simulation using **Isaac Warp** for GPU-accelerated simulation
-and **OpenUSD** for geometry and visualization.
+## Overview
+
+A simulation that demonstrates spray painting a vertical wall surface. The simulation models a spray nozzle emitting paint in a triangular fan pattern and updates the wall surface over time to reflect paint accumulation.
+
+## Scenario
+
+- A single vertical cuboid mesh represents the wall
+- A spray nozzle moves in front of the wall
+- The spray has a triangular fan pattern with configurable parameters
+- Over time, paint accumulates where the spray impacts the wall
 
 ## Project Structure
 ```
-paint_sim/
-├── config.py          # All configurable parameters
-├── wall.py            # Task 1: Cuboid wall mesh (OpenUSD)
-├── spray.py           # Task 2: Spray simulation (Isaac Warp kernels)
-├── paint.py           # Task 3: Paint accumulation
-├── nozzle_path.py     # Task 5: Animated nozzle zigzag path
-├── main.py            # Task 4: Visualization + runs simulation
-├── output/            # Generated USD files
-└── textures/          # Generated texture images
+config.py          - Configurable spray parameters
+wall.py            - Task 1: Cuboid wall mesh (OpenUSD)
+spray.py           - Task 2: Spray simulation (Isaac Warp kernels)
+paint.py           - Task 3: Paint accumulation
+nozzle_path.py     - Task 5: Nozzle animation path
+main.py            - Task 4: Visualization and main simulation
 ```
-
-## Requirements
-
-- Python 3.8+
-- Isaac Warp (`pip install warp-lang`)
-- OpenUSD (`pip install usd-core`)
-- NumPy (`pip install numpy`)
 
 ## How to Run
 ```bash
+pip install warp-lang usd-core numpy
 python3 main.py
 ```
 
-## View Results in usdview
+## View Results
 ```bash
-usdview output/wall_initial.usda    # Empty wall (before)
-usdview output/wall_midway.usda     # Half painted (during)
-usdview output/wall_final.usda      # Fully painted (after)
-usdview output/spray_animation.usda # Animation (press Play)
+usdview output/wall_initial.usda
+usdview output/wall_midway.usda
+usdview output/wall_final.usda
+usdview output/spray_animation.usda
 ```
 
-Press `4` in usdview to remove wireframe.
-
-## Configurable Parameters (config.py)
-
-| Parameter | Value | Description |
-|-----------|-------|-------------|
-| WALL_WIDTH | 4.0m | Wall width |
-| WALL_HEIGHT | 3.0m | Wall height |
-| WALL_DEPTH | 0.1m | Wall thickness |
-| FAN_ANGLE | 0.5 rad | Spray fan spread |
-| SPRAY_RANGE | 2.0m | Max spray distance |
-| SPRAY_DENSITY | 800 | Particles per step |
-| NUM_PASSES | 10 | Zigzag passes |
+Press 4 in usdview to remove wireframe, then click Play for animation.
 
 ## Screenshots
 
 ### Initial State (before spraying)
 ![Initial](screenshots/initial.png)
 
-### Intermediate Step (midway)
+### Intermediate Step
 ![Midway](screenshots/midway.png)
 
-### Final Result (fully painted)
+### Final Fully Painted Wall
 ![Final](screenshots/final.png)
-
-## Animation Video
-
-https://github.com/user-attachments/assets/cbbc9d05-2b56-4938-b3a0-90c0c29e4727
