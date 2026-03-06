@@ -53,3 +53,9 @@ Press 4 in usdview to remove wireframe, then click Play for animation.
 
 ### Final Fully Painted Wall
 ![Final](screenshots/final.png)
+
+### Animation Video
+[Screencast from 03-06-2026 08:46:48 PM.webm](https://github.com/user-attachments/assets/790f0d30-d924-4dab-8a2a-2af74680c3ae)
+
+
+
