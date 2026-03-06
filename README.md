@@ -60,3 +60,7 @@ Press `4` in usdview to remove wireframe.
 
 ### Final Result (fully painted)
 ![Final](screenshots/final.png)
+
+## Animation Video
+
+https://github.com/joyalrajajony02-byte/spray-paint-simulation/raw/main/output/spray_video.mp4
