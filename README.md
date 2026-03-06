@@ -21,9 +21,15 @@ nozzle_path.py     - Task 5: Nozzle animation path
 main.py            - Task 4: Visualization and main simulation
 ```
 
+## Installation
+```bash
+pip install warp-lang
+pip install usd-core
+pip install numpy
+```
+
 ## How to Run
 ```bash
-pip install warp-lang usd-core numpy
 python3 main.py
 ```
 
