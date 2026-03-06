@@ -1,16 +1,5 @@
 # spray.py - Task 2: Spray simulation
 # The spray forms a TRIANGULAR FAN pattern:
-#
-#   Seen from above (top view):
-#
-#        nozzle
-#          *
-#         /|\
-#        / | \
-#       /  |  \
-#      /   |   \
-#     -----+-----   <-- wall
-#
 #   The fan is wide horizontally and has some vertical spread.
 #   Configurable: FAN_ANGLE (width), SPRAY_RANGE, SPRAY_DENSITY
 
